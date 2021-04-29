@@ -210,7 +210,7 @@ class TestHandler implements TaskHandlerInterface
     /**
      * {@inheritdoc}
      */
-    public function handle($workload)
+    public function handle($workload, $execution = null)
     {
         return $workload;
     }
