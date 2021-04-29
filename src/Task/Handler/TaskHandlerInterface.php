@@ -11,6 +11,8 @@
 
 namespace Task\Handler;
 
+use Task\Execution\TaskExecutionInterface;
+
 /**
  * Task handler registry.
  *
@@ -22,9 +24,10 @@ interface TaskHandlerInterface
      * Handles given workload and returns result.
      *
      * @param mixed|mixed[] $workload
+     * @param null|TaskExecutionInterface $execution
      *
      * @return mixed|mixed[]|void
      */
-    public function handle($workload);
+    public function handle($workload, $execution = null);
 }
 
